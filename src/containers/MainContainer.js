@@ -10,6 +10,8 @@ class MainContainer extends Component {
   }
 
   buyStock = (stock) => {
+    if (this.state.boughtStocks.includes(stock)) return
+    
     this.setState({ boughtStocks: [...this.state.boughtStocks, stock]})
   }
 
